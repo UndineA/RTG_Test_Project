@@ -22,23 +22,23 @@ body {
                 -18px 18px 39px #8f70a4;
 }
 
-.blocks {
+.app-element {
     padding-bottom: 20px; 
 }
 
-#input-box, #add-button {
+.input-box, .add-button {
     background-color: #c7b3d5;
     border-radius: 15px;
     border: none;
     padding: 10px;
 }
 
-#input-box {
+.input-box {
     width: 80%;
     outline: none;
 }
 
-#add-button:hover {
+.add-button:hover {
     background-color: #c7b3d5b9;
     cursor: pointer;
 }
