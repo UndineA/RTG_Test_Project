@@ -10,15 +10,15 @@
   <body>
       <div class="to-do-app">
         <h2 class="app-element">To-do list</h2>
-        <div class="app-element input-field">
-          <input type="text" class="input-box" placeholder="New task">
-          <button class="add-button">Add</button>
+        <div class="app-element">
+          <input type="text" class="input-box" id="input-box" placeholder="New task">
+          <button class="add-button" onclick="addTask()">Add</button>
         </div>
-        <div class="app-element" id="tasks">
-          <ul>
+        
+          <ul class="app-element" id="tasks">
 
           </ul>
-        </div>
+        
       </div>
   </body>
   <script src="index.js"></script>
