@@ -26,7 +26,7 @@ body {
     padding-bottom: 20px; 
 }
 
-.input-box, .add-button {
+.input-box, button {
     background-color: #c7b3d5;
     border-radius: 15px;
     border: none;
@@ -38,7 +38,21 @@ body {
     outline: none;
 }
 
-.add-button:hover {
+button:hover {
     background-color: #c7b3d5b9;
     cursor: pointer;
+}
+
+.deleteButton {
+    margin-left: 15px;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+input[type="checkbox"] {
+    accent-color: #421d5c;
+    margin: 15px;
 }
