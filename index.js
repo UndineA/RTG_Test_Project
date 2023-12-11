@@ -1,6 +1,6 @@
 const inputBox = document.getElementById("input-box");
 const tasks = document.getElementById("tasks");
-let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+const itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
 tryCatch();
 
 function tryCatch() {
@@ -30,7 +30,22 @@ function addHtmlElements(inputtext) {
      taskCheckbox.setAttribute("type", "checkbox");
      taskCheckbox.setAttribute("class", "checkbox");
      li.prepend(taskCheckbox);
+
+
+
+     const newElement = `
+     <div onclick="removeTask()" data-item-id="2">
+          <li>${inputtext}</liv>
+          <button class="deleteButton"">Delete</button>
+     </div>
+     `
+
      deleteTask();
+}
+
+function removeTask(event) {
+     const dataAtribute = event.target.getAttribute("data-item-id");
+
 }
 
 function saveData(text){
@@ -51,7 +66,13 @@ function addTask(){
 
 deleteTask();
 
-function deleteTask() {
+function deleteTask(event) {
+
+     // GET items from localStorage
+     // Take ID from event.target.getAttribute
+     // Find this item with ID in localStorage and in DOM tree
+     // Remove from DOM tree and store new array in localStorage
+     
      let deleteBtn = document.getElementsByClassName("deleteButton");
      let i;
      let j;     
@@ -61,7 +82,9 @@ function deleteTask() {
        this.parentElement.remove();
 
        for (j = 0; j < itemsArray.length; j++){
+          console.log(j === i)
           if (j === i) {
+               console.log('TADAAA')
              let filteredArray = itemsArray.filter((element, index) => j != index);
              localStorage.setItem('items', JSON.stringify(filteredArray));
              }
